@@ -9,7 +9,7 @@ public:
     
 	void RobotInit() {                          //Runs once when robot is turned on
 		//Typically not necessary to use.  In the past we have used it to update the lcd once in the beginning
-		drive = new RobotDrive(2,3,5,6);
+		drive = new RobotDrive(7,3,5,6);
 
 		leftJoystick = new Joystick(1);
 		rightJoystick = new Joystick(2);
