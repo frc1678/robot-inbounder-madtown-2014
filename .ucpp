@@ -1,0 +1,22 @@
+#! /bin/bash
+
+##### Project-specific ucpp settings #####
+
+# Workspace root directory
+export CPP_PROJECT_WS_ROOT_DIR="/c/Users/Wesley/Desktop"
+
+# Project name
+export CPP_PROJECT_NAME="madtown_circuitBirds"
+
+# Project root directory
+export CPP_PROJECT_ROOT_DIR="/c/Users/Wesley/Desktop/madtown_circuitBirds"
+# IP to deploy robot code
+export DEPLOY_IP=10.16.78.2
+# Default configure method for "ucpp configure"
+#   Possible values: py, winpy, wr
+# Comment out to use global settings
+# Leave blank to print a help message
+#DEFAULT_CONFIGURE_COMMAND=
+
+export HAVE_CPP_PROJECT=yes
+

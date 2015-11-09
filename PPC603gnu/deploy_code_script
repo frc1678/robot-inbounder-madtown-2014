@@ -1,0 +1,4 @@
+cd /
+cd ni-rt
+cd system
+put madtown_circuitBirds/Debug/madtown_circuitBirds.out FRC_UserProgram.out
