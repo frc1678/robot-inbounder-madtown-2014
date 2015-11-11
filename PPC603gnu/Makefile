@@ -37,7 +37,7 @@ else
 MODE_DIR := NonDebug
 endif
 OBJ_DIR := .
-PRJ_ROOT_DIR := c:/Users/Wesley/Desktop/madtown_circuitBirds
+PRJ_ROOT_DIR := c:/Users/Wesley/Desktop/fmlbot
 WS_ROOT_DIR := c:/Users/Wesley/Desktop
 
 
@@ -83,104 +83,104 @@ endif
 
 
 #Project Targets
-PROJECT_TARGETS = madtown_circuitBirds/$(MODE_DIR)/madtown_circuitBirds.out \
-	 madtown_circuitBirds_partialImage/$(MODE_DIR)/madtown_circuitBirds_partialImage.o
+PROJECT_TARGETS = fmlbot/$(MODE_DIR)/fmlbot.out \
+	 fmlbot_partialImage/$(MODE_DIR)/fmlbot_partialImage.o
 
 
 #Rules
 
-# madtown_circuitBirds
+# fmlbot
 ifeq ($(DEBUG_MODE),1)
-madtown_circuitBirds/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -g
-madtown_circuitBirds/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -g
-madtown_circuitBirds/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -g
-madtown_circuitBirds/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
-madtown_circuitBirds/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
-madtown_circuitBirds/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -g
+fmlbot/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -g
+fmlbot/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -g
+fmlbot/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -g
+fmlbot/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
+fmlbot/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
+fmlbot/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -g
 else
-madtown_circuitBirds/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -O2 -fstrength-reduce -fno-builtin
-madtown_circuitBirds/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -O2 -fstrength-reduce -fno-builtin
-madtown_circuitBirds/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -O2 -fstrength-reduce -fno-builtin
-madtown_circuitBirds/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
-madtown_circuitBirds/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
-madtown_circuitBirds/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -O2 -fstrength-reduce -fno-builtin
+fmlbot/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -O2 -fstrength-reduce -fno-builtin
+fmlbot/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -O2 -fstrength-reduce -fno-builtin
+fmlbot/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -O2 -fstrength-reduce -fno-builtin
+fmlbot/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
+fmlbot/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
+fmlbot/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -O2 -fstrength-reduce -fno-builtin
 endif
-madtown_circuitBirds/$(MODE_DIR)/% : IDE_INCLUDES = -I$(WIND_BASE)/target/h -I$(WIND_BASE)/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip -I. 
-madtown_circuitBirds/$(MODE_DIR)/% : IDE_LIBRARIES = $(WIND_BASE)/target/lib/WPILib.a 
-madtown_circuitBirds/$(MODE_DIR)/% : PROJECT_TYPE = DKM
-madtown_circuitBirds/$(MODE_DIR)/% : DEFINES = 
-madtown_circuitBirds/$(MODE_DIR)/% : EXPAND_DBG = 0
-madtown_circuitBirds/$(MODE_DIR)/% : VX_CPU_FAMILY = ppc
-madtown_circuitBirds/$(MODE_DIR)/% : CPU = PPC603
-madtown_circuitBirds/$(MODE_DIR)/% : TOOL_FAMILY = gnu
-madtown_circuitBirds/$(MODE_DIR)/% : TOOL = gnu
-madtown_circuitBirds/$(MODE_DIR)/% : TOOL_PATH = /c/Users/Wesley/.ucpp/gccdist/WindRiver/gnu/3.4.4-vxworks-6.3/x86-win32/bin/
-madtown_circuitBirds/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp  -mlongcall
-madtown_circuitBirds/$(MODE_DIR)/% : LIBPATH = 
-madtown_circuitBirds/$(MODE_DIR)/% : LIBS = 
-madtown_circuitBirds/$(MODE_DIR)/% : OBJ_DIR := madtown_circuitBirds/$(MODE_DIR)
+fmlbot/$(MODE_DIR)/% : IDE_INCLUDES = -I$(WIND_BASE)/target/h -I$(WIND_BASE)/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip -I. 
+fmlbot/$(MODE_DIR)/% : IDE_LIBRARIES = $(WIND_BASE)/target/lib/WPILib.a 
+fmlbot/$(MODE_DIR)/% : PROJECT_TYPE = DKM
+fmlbot/$(MODE_DIR)/% : DEFINES = 
+fmlbot/$(MODE_DIR)/% : EXPAND_DBG = 0
+fmlbot/$(MODE_DIR)/% : VX_CPU_FAMILY = ppc
+fmlbot/$(MODE_DIR)/% : CPU = PPC603
+fmlbot/$(MODE_DIR)/% : TOOL_FAMILY = gnu
+fmlbot/$(MODE_DIR)/% : TOOL = gnu
+fmlbot/$(MODE_DIR)/% : TOOL_PATH = /c/Users/Wesley/.ucpp/gccdist/WindRiver/gnu/3.4.4-vxworks-6.3/x86-win32/bin/
+fmlbot/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp  -mlongcall
+fmlbot/$(MODE_DIR)/% : LIBPATH = 
+fmlbot/$(MODE_DIR)/% : LIBS = 
+fmlbot/$(MODE_DIR)/% : OBJ_DIR := fmlbot/$(MODE_DIR)
 
-OBJECTS_madtown_circuitBirds = madtown_circuitBirds_partialImage/$(MODE_DIR)/madtown_circuitBirds_partialImage.o
+OBJECTS_fmlbot = fmlbot_partialImage/$(MODE_DIR)/fmlbot_partialImage.o
 
-madtown_circuitBirds/$(MODE_DIR)/madtown_circuitBirds.out : $(OBJECTS_madtown_circuitBirds)
-	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@";rm -f "$@";$(TOOL_PATH)nmppc.exe $(OBJECTS_madtown_circuitBirds) $(IDE_LIBRARIES) | tclsh $(WIND_BASE)/host/resource/hutils/tcl/munch.tcl -c ppc > $(OBJ_DIR)/ctdt.c; $(TOOL_PATH)ccppc $(DEBUGFLAGS_Linker) $(CC_ARCH_SPEC) -fdollars-in-identifiers -Wall $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES)  -o $(OBJ_DIR)/ctdt.o -c $(OBJ_DIR)/ctdt.c; $(TOOL_PATH)ccppc -r -nostdlib -Wl,-X -T $(WIND_BASE)/target/h/tool/gnu/ldscripts/link.OUT -o "$@" $(OBJ_DIR)/ctdt.o $(OBJECTS_madtown_circuitBirds) $(IDE_LIBRARIES) $(LIBPATH) $(LIBS)  $(ADDED_LIBPATH) $(ADDED_LIBS) && if [ "$(EXPAND_DBG)" = "1" ]; then plink "$@";fi
+fmlbot/$(MODE_DIR)/fmlbot.out : $(OBJECTS_fmlbot)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@";rm -f "$@";$(TOOL_PATH)nmppc.exe $(OBJECTS_fmlbot) $(IDE_LIBRARIES) | tclsh $(WIND_BASE)/host/resource/hutils/tcl/munch.tcl -c ppc > $(OBJ_DIR)/ctdt.c; $(TOOL_PATH)ccppc $(DEBUGFLAGS_Linker) $(CC_ARCH_SPEC) -fdollars-in-identifiers -Wall $(ADDED_CFLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES)  -o $(OBJ_DIR)/ctdt.o -c $(OBJ_DIR)/ctdt.c; $(TOOL_PATH)ccppc -r -nostdlib -Wl,-X -T $(WIND_BASE)/target/h/tool/gnu/ldscripts/link.OUT -o "$@" $(OBJ_DIR)/ctdt.o $(OBJECTS_fmlbot) $(IDE_LIBRARIES) $(LIBPATH) $(LIBS)  $(ADDED_LIBPATH) $(ADDED_LIBS) && if [ "$(EXPAND_DBG)" = "1" ]; then plink "$@";fi
 
-madtown_circuitBirds/$(MODE_DIR)/madtown_circuitBirds_compile_file : $(FILE) ;
+fmlbot/$(MODE_DIR)/fmlbot_compile_file : $(FILE) ;
 
-_clean :: madtown_circuitBirds/$(MODE_DIR)/madtown_circuitBirds_clean
+_clean :: fmlbot/$(MODE_DIR)/fmlbot_clean
 
-madtown_circuitBirds/$(MODE_DIR)/madtown_circuitBirds_clean : 
-	$(TRACE_FLAG)if [ -d "madtown_circuitBirds" ]; then cd "madtown_circuitBirds"; rm -rf $(MODE_DIR); fi
+fmlbot/$(MODE_DIR)/fmlbot_clean : 
+	$(TRACE_FLAG)if [ -d "fmlbot" ]; then cd "fmlbot"; rm -rf $(MODE_DIR); fi
 
 
-# madtown_circuitBirds_partialImage
+# fmlbot_partialImage
 ifeq ($(DEBUG_MODE),1)
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -g
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -g
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -g
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -g
+fmlbot_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -g
+fmlbot_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -g
+fmlbot_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -g
+fmlbot_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
+fmlbot_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
+fmlbot_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -g
 else
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -O2 -fstrength-reduce -fno-builtin
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -O2 -fstrength-reduce -fno-builtin
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -O2 -fstrength-reduce -fno-builtin
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -O2 -fstrength-reduce -fno-builtin
+fmlbot_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C-Compiler = -O2 -fstrength-reduce -fno-builtin
+fmlbot_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_C++-Compiler = -O2 -fstrength-reduce -fno-builtin
+fmlbot_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Linker = -O2 -fstrength-reduce -fno-builtin
+fmlbot_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Partial-Image-Linker = 
+fmlbot_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Librarian = 
+fmlbot_partialImage/$(MODE_DIR)/% : DEBUGFLAGS_Assembler = -O2 -fstrength-reduce -fno-builtin
 endif
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : IDE_INCLUDES = -I$(WIND_BASE)/target/h -I$(WIND_BASE)/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip -I. -I$(PRJ_ROOT_DIR)
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : IDE_LIBRARIES = $(WIND_BASE)/target/lib/WPILib.a 
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : PROJECT_TYPE = DKM
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : DEFINES = 
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : EXPAND_DBG = 0
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : VX_CPU_FAMILY = ppc
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : CPU = PPC603
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : TOOL_FAMILY = gnu
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : TOOL = gnu
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : TOOL_PATH = /c/Users/Wesley/.ucpp/gccdist/WindRiver/gnu/3.4.4-vxworks-6.3/x86-win32/bin/
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp  -mlongcall
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : LIBPATH = 
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : LIBS = 
-madtown_circuitBirds_partialImage/$(MODE_DIR)/% : OBJ_DIR := madtown_circuitBirds_partialImage/$(MODE_DIR)
+fmlbot_partialImage/$(MODE_DIR)/% : IDE_INCLUDES = -I$(WIND_BASE)/target/h -I$(WIND_BASE)/target/h/WPILib -I$(WIND_BASE)/target/h/wrn/coreip -I. -I$(PRJ_ROOT_DIR)
+fmlbot_partialImage/$(MODE_DIR)/% : IDE_LIBRARIES = $(WIND_BASE)/target/lib/WPILib.a 
+fmlbot_partialImage/$(MODE_DIR)/% : PROJECT_TYPE = DKM
+fmlbot_partialImage/$(MODE_DIR)/% : DEFINES = 
+fmlbot_partialImage/$(MODE_DIR)/% : EXPAND_DBG = 0
+fmlbot_partialImage/$(MODE_DIR)/% : VX_CPU_FAMILY = ppc
+fmlbot_partialImage/$(MODE_DIR)/% : CPU = PPC603
+fmlbot_partialImage/$(MODE_DIR)/% : TOOL_FAMILY = gnu
+fmlbot_partialImage/$(MODE_DIR)/% : TOOL = gnu
+fmlbot_partialImage/$(MODE_DIR)/% : TOOL_PATH = /c/Users/Wesley/.ucpp/gccdist/WindRiver/gnu/3.4.4-vxworks-6.3/x86-win32/bin/
+fmlbot_partialImage/$(MODE_DIR)/% : CC_ARCH_SPEC = -mcpu=603 -mstrict-align -mno-implicit-fp  -mlongcall
+fmlbot_partialImage/$(MODE_DIR)/% : LIBPATH = 
+fmlbot_partialImage/$(MODE_DIR)/% : LIBS = 
+fmlbot_partialImage/$(MODE_DIR)/% : OBJ_DIR := fmlbot_partialImage/$(MODE_DIR)
 
-madtown_circuitBirds_partialImage/$(MODE_DIR)/Objects/madtown_circuitBirds/madtown.o : c:/Users/Wesley/Desktop/madtown_circuitBirds/madtown.cpp
+fmlbot_partialImage/$(MODE_DIR)/Objects/fmlbot/madtown.o : c:/Users/Wesley/Desktop/fmlbot/madtown.cpp
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
-OBJECTS_madtown_circuitBirds_partialImage = madtown_circuitBirds_partialImage/$(MODE_DIR)/Objects/madtown_circuitBirds/madtown.o 
+OBJECTS_fmlbot_partialImage = fmlbot_partialImage/$(MODE_DIR)/Objects/fmlbot/madtown.o 
 
-madtown_circuitBirds_partialImage/$(MODE_DIR)/madtown_circuitBirds_partialImage.o : $(OBJECTS_madtown_circuitBirds_partialImage)
-	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc -r -nostdlib -Wl,-X  -o "$@" $(OBJECTS_madtown_circuitBirds_partialImage) $(LIBPATH) $(LIBS) $(ADDED_LIBPATH) $(ADDED_LIBS)  && if [ "$(EXPAND_DBG)" = "1" ]; then plink "$@";fi
+fmlbot_partialImage/$(MODE_DIR)/fmlbot_partialImage.o : $(OBJECTS_fmlbot_partialImage)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc -r -nostdlib -Wl,-X  -o "$@" $(OBJECTS_fmlbot_partialImage) $(LIBPATH) $(LIBS) $(ADDED_LIBPATH) $(ADDED_LIBS)  && if [ "$(EXPAND_DBG)" = "1" ]; then plink "$@";fi
 
-madtown_circuitBirds_partialImage/$(MODE_DIR)/madtown_circuitBirds_partialImage_compile_file : $(FILE) ;
+fmlbot_partialImage/$(MODE_DIR)/fmlbot_partialImage_compile_file : $(FILE) ;
 
-_clean :: madtown_circuitBirds_partialImage/$(MODE_DIR)/madtown_circuitBirds_partialImage_clean
+_clean :: fmlbot_partialImage/$(MODE_DIR)/fmlbot_partialImage_clean
 
-madtown_circuitBirds_partialImage/$(MODE_DIR)/madtown_circuitBirds_partialImage_clean : 
-	$(TRACE_FLAG)if [ -d "madtown_circuitBirds_partialImage" ]; then cd "madtown_circuitBirds_partialImage"; rm -rf $(MODE_DIR); fi
+fmlbot_partialImage/$(MODE_DIR)/fmlbot_partialImage_clean : 
+	$(TRACE_FLAG)if [ -d "fmlbot_partialImage" ]; then cd "fmlbot_partialImage"; rm -rf $(MODE_DIR); fi
 
-DEP_FILES := madtown_circuitBirds_partialImage/$(MODE_DIR)/Objects/madtown_circuitBirds/madtown.d 
+DEP_FILES := fmlbot_partialImage/$(MODE_DIR)/Objects/fmlbot/madtown.d 
 -include $(DEP_FILES)
 
 

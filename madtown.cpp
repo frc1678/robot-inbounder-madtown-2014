@@ -32,6 +32,12 @@ public:
 		SmartDashboard::PutString("Code Changed", __TIME__);
 	}
 	
+
+	//////////
+	// AUTO //
+	//////////
+
+
 	void AutonomousInit() {
 		SmartDashboard::PutNumber("State", 666);
 		
@@ -42,13 +48,10 @@ public:
 		shifter2->Set(DoubleSolenoid::kForward);
 	}
 	
-	void TeleopInit() {
-		SmartDashboard::PutNumber("State", 1337);
-	}
-	
 	void AutonomousPeriodic() {
 		double timeInAuto = timer->Get() - autoStartTime;
-        if (timeInAuto < 2.0) {
+
+        if (timeInAuto < 1.25) {
         	drive->TankDrive(-1.0, -1.0);
         	spinny->Set(0);
       	} else {
@@ -57,6 +60,14 @@ public:
         }
 	}
 	
+	////////////
+	// TELEOP //
+	////////////
+
+	void TeleopInit() {
+		SmartDashboard::PutNumber("State", 1337);
+	}
+
 	void TeleopPeriodic() {
 		drive->TankDrive(leftJoystick->GetY(), rightJoystick->GetY());
 
@@ -72,7 +83,7 @@ public:
 		}
 
 		// Intake
-		if (uselessJoystick->GetTrigger() || uselessJoystick->GetY() < -0.75) {
+		if (uselessJoystick->GetY() < -0.75) {
 			intake->Set(1);
 		} else {
 			intake->Set(0);
@@ -82,10 +93,10 @@ public:
 		if (uselessJoystick->GetRawButton(3)) {
 			spinny->Set(1);
 		}
-		if (uselessJoystick->GetRawButton(2)) {
+		if (uselessJoystick->GetRawButton(2) || uselessJoystick->GetTrigger()) {
 			spinny->Set(-1);
 		}
-		if (!uselessJoystick->GetRawButton(3) && !uselessJoystick->GetRawButton(2)) {
+		if (!uselessJoystick->GetRawButton(3) && !uselessJoystick->GetRawButton(2) && !uselessJoystick->GetTrigger()) {
 			spinny->Set(0);
 		}
 
