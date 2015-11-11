@@ -51,12 +51,15 @@ public:
 	void AutonomousPeriodic() {
 		double timeInAuto = timer->Get() - autoStartTime;
 
-        if (timeInAuto < 1.25) {
+        if (timeInAuto < 1.5) {
         	drive->TankDrive(-1.0, -1.0);
         	spinny->Set(0);
-      	} else {
+      	} else if (timeInAuto > 2.7) {
         	drive->TankDrive(0.0, 0.0);
         	spinny->Set(1);
+        } else {
+        	drive->TankDrive(0.0, 0.0);
+        	spinny->Set(0);
         }
 	}
 	
